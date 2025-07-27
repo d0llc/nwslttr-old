@@ -1,0 +1,18 @@
+{
+  "extends": "./packages/config/src/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/*": ["packages/*"]
+    }
+  },
+  "include": [],
+  "references": [
+    { "path": "./packages/types" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/db" },
+    { "path": "./apps/web" },
+    { "path": "./apps/worker" },
+    { "path": "./apps/extension" }
+  ]
+}

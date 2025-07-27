@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+
+# Testing & Build
+coverage/
+*.lcov
+.next/
+out/
+dist/
+*.tsbuildinfo
+.turbo/
+
+# Database
+*.db
+*.sqlite*
+
+# Logs
+logs/
+*.log
+*-debug.log*
+
+# Environment
+.env*
+!.env.example
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/*.json
+.idea/
+*.sw[op]
+*~
+
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+.mf/
+configuration.d.ts
+
+# Security
+*.key
+*.pem
+*.cert
+*.crt
+private/
+
+# Documentation
+*.md
+!README.md
+!packages/*/README.md
+!apps/*/README.md
+
+# Temporary
+tmp/
+temp/
+.tmp/
+.cache/
+*.tmp
+*.bak
+*.old
+
+# Debug
+*.map
+
+# Misc
+.history/

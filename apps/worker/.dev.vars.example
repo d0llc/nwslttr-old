@@ -1,0 +1,5 @@
+# Example .dev.vars file for local development
+# Copy this to .dev.vars and add your actual Sentry DSN for testing
+
+# Sentry DSN for error tracking (get from your Sentry project settings)
+SENTRY_DSN="https://your-key@your-org.ingest.sentry.io/your-project-id"

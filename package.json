@@ -1,0 +1,51 @@
+{
+  "name": "nwslttr",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Newsletter link tracking service",
+  "license": "UNLICENSED",
+  "repository": "private",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:unit": "vitest",
+    "test:unit:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "rm -rf .turbo packages/*/.turbo apps/*/.turbo packages/*/dist apps/worker/.wrangler",
+    "start:prod": "cd apps/web && pnpm start",
+    "db:generate": "dotenv -- turbo run db:generate",
+    "db:migrate": "dotenv -- turbo run db:migrate",
+    "db:push": "dotenv -- turbo run db:push",
+    "db:studio": "cd packages/db && pnpm drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.54.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "@vitest/ui": "^3.2.4",
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "msw": "^2.10.4",
+    "playwright": "^1.54.1",
+    "prettier": "^3.3.3",
+    "turbo": "latest",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.13.1"
+}
