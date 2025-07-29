@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+.next
+out
+build
+coverage
+
+# Logs
+*.log
+
+# Turborepo
+.turbo
+
+# Cloudflare
+.wrangler
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Generated files
+*.generated.*
+tsconfig.tsbuildinfo

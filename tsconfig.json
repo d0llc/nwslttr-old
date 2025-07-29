@@ -12,7 +12,7 @@
     { "path": "./packages/utils" },
     { "path": "./packages/db" },
     { "path": "./apps/web" },
-    { "path": "./apps/worker" },
+    { "path": "./apps/router" },
     { "path": "./apps/extension" }
   ]
 }

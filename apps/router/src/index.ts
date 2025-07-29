@@ -27,6 +27,12 @@ interface ClickData {
   mergeParams: Record<string, string> | null
 }
 
+interface AnalyticsDataPoint {
+  indexes?: string[]
+  blobs?: string[]
+  doubles?: number[]
+}
+
 const responses = {
   notFound: () =>
     new Response('Not found', {
@@ -69,7 +75,7 @@ const responses = {
     }),
 }
 
-async function writeAnalytics(env: Env, data: any): Promise<void> {
+async function writeAnalytics(env: Env, data: AnalyticsDataPoint): Promise<void> {
   try {
     await env.ANALYTICS.writeDataPoint(data)
   } catch {}
@@ -291,6 +297,7 @@ export default {
 
       try {
         const clickRecords = chunk.map((msg) => ({
+          messageId: msg.id,
           linkId: msg.body.linkId,
           clickedAt: new Date(msg.body.clickedAt),
           ipCountry: msg.body.ipCountry,

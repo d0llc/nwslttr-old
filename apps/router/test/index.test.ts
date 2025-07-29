@@ -125,9 +125,9 @@ describe('Queue Consumer Tests', () => {
       retryAll: () => {},
     } as any
 
-    const worker = await import('../src/index')
+    const router = await import('../src/index')
 
-    await worker.default.queue(batch, env, ctx)
+    await router.default.queue(batch, env, ctx)
     await waitOnExecutionContext(ctx)
   })
 
@@ -158,10 +158,10 @@ describe('Queue Consumer Tests', () => {
       retryAll: () => {},
     } as any
 
-    const worker = await import('../src/index')
+    const router = await import('../src/index')
 
     try {
-      await worker.default.queue(batch, env, ctx)
+      await router.default.queue(batch, env, ctx)
     } catch (e) {}
 
     await waitOnExecutionContext(ctx)

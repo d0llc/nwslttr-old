@@ -1,0 +1,36 @@
+{
+  "name": "@nwslttr/web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^1.10.0",
+    "@repo/db": "workspace:*",
+    "lru-cache": "^10.2.0",
+    "nanoid": "^5.0.5",
+    "next": "^15.4.2",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^7.0.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/node": "^24.0.15",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "eslint-config-next": "^15.4.2",
+    "typescript": "^5.6.3"
+  },
+  "imports": {
+    "#*": "./src/*"
+  }
+}

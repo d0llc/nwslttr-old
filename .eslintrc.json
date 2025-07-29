@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "prettier"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    ".next",
+    "coverage",
+    "*.config.js",
+    "*.config.ts",
+    "apps/web/**"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+      },
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          {
+            "prefer": "type-imports"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.tsx"],
+      "plugins": ["react"],
+      "extends": ["plugin:react/recommended"],
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      },
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}

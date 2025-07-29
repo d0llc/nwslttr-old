@@ -1,0 +1,19 @@
+{
+  "extends": "../../packages/config/src/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "#*": ["./src/*"]
+    },
+    "noEmit": true,
+    "target": "ES2017",
+    "moduleResolution": "bundler"
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
